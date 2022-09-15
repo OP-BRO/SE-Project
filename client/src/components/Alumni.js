@@ -102,7 +102,6 @@ export default function Alumni() {
         <button type="button" class="btn btn-secondary">Send Invitation</button>
     </div>
     </form>
-    
 </div>
 </>
 

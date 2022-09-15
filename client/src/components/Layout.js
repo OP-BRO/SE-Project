@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Feedback from "./Feedback";
 import Homepage from "./Homepage";
 import Convocation from "./Convocation";
+import Alumni from "./Alumni";
+import Event from "./Event";
 import {
   AppBar,
   Toolbar,
@@ -134,6 +136,16 @@ const SimpleDrawer = () => {
               <h5>Convocation</h5>
             </Link>
           </div>
+          <div className="mt-3">
+            <Link className="link-dark text-decoration-none" to="/alumni">
+              <h5>Alumni</h5>
+            </Link>
+          </div>
+          <div className="mt-3">
+            <Link className="link-dark text-decoration-none" to="/event">
+              <h5>Event Management</h5>
+            </Link>
+          </div>
         </List>
       </Drawer>
       <AppBar
@@ -173,6 +185,8 @@ const SimpleDrawer = () => {
             <Route exact path="/admissions" element={<Admissons />}/>
             <Route exact path="/resultmanage" element={<ResultManagement />}/>
             <Route exact path="/convocation" element={<Convocation />}/>
+            <Route exact path="/alumni" element={<Alumni />}/>
+            <Route exact path="/event" element={<Event />}/>
           </Routes>
         </div>
         <br />

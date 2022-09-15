@@ -7,7 +7,7 @@ import Alumni from './components/Alumni'
 function App() {
   return (
     <div className="App">
-      <Alumni/>
+      <Mainpage/>
     </div>
   );
 }
