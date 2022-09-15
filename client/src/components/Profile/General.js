@@ -5,9 +5,25 @@ export default function General() {
   const history = useNavigate();
   const [student, setStudent] = useState({
     Student_name: "",
+    Gender: "",
+    Blood_group: "",
     DOB: "",
+    PWD: "",
     Email: "",
     Mobile_no: "",
+    Alt_mobile_no: "",
+    Aadhar_no: "",
+    Religion: "",
+    Mother_tongue: "",
+  
+    Father_name: "",
+    Father_email: "",
+    Father_occupation: "",
+    Father_Mobile_no: "",
+    Mother_name: "",
+    Mother_email: "",
+    Mother_occupation: "",
+    Mother_mobile_no: "",
   });
 
   let name, value;
@@ -20,7 +36,8 @@ export default function General() {
   };
   const PostData = async (e) => {
     e.preventDefault();
-    const { Student_name, DOB, Email, Mobile_no } = student;
+    const { Student_name, Gender ,  Blood_group ,DOB ,PWD ,Email ,Mobile_no ,Alt_mobile_no ,Aadhar_no ,Religion ,Mother_tongue ,
+            Father_name ,Father_email ,Father_occupation ,Father_Mobile_no ,Mother_name ,Mother_email ,Mother_occupation,Mother_mobile_no , } = student;
 
     const res = await fetch("/general", {
       method: "POST",
@@ -29,9 +46,25 @@ export default function General() {
       },
       body: JSON.stringify({
         Student_name,
-        DOB,
-        Email,
-        Mobile_no,
+        Gender ,
+        Blood_group ,
+        DOB ,
+        PWD ,
+        Email ,
+        Mobile_no ,
+        Alt_mobile_no ,
+        Aadhar_no ,
+        Religion ,
+        Mother_tongue ,
+  
+        Father_name ,
+        Father_email ,
+        Father_occupation ,
+        Father_Mobile_no ,
+        Mother_name ,
+        Mother_email ,
+        Mother_occupation,
+        Mother_mobile_no ,
       }),
     });
 
@@ -91,6 +124,9 @@ export default function General() {
             <select
               className="form-select form-select-sm"
               aria-label=".form-select-sm example"
+              name="Gender"
+              value={student.Gender}
+              onChange={handleInputs}
             >
               <option selected>Select Gender</option>
               <option value="1">Male</option>
@@ -111,6 +147,9 @@ export default function General() {
             <select
               className="form-select form-select-sm"
               aria-label=".form-select-sm example"
+              name="Blood_group"
+              value={student.Blood_group}
+              onChange={handleInputs}
             >
               <option selected>Select Blood Group</option>
               <option value="1">A+</option>
@@ -155,6 +194,9 @@ export default function General() {
             <select
               className="form-select form-select-sm"
               aria-label=".form-select-sm example"
+              name="PWD"
+              value={student.PWD}
+              onChange={handleInputs}
             >
               <option selected>Select</option>
               <option value="1">Yes</option>
@@ -215,7 +257,10 @@ export default function General() {
               type="text"
               className="form-control  form-control-sm"
               id="inputAltMobNo"
+              name="Alt_mobile_no"
               placeholder="Alternate Mobile Number"
+              value={student.Alt_mobile_no}
+              onChange={handleInputs}
             />
           </div>
         </div>
@@ -233,6 +278,9 @@ export default function General() {
               className="form-control  form-control-sm"
               id="inputAadhar"
               placeholder="Aadhar Number"
+              name="Aadhar_no"
+              value={student.Aadhar_no}
+              onChange={handleInputs}
             />
           </div>
         </div>
@@ -250,6 +298,9 @@ export default function General() {
               className="form-control  form-control-sm"
               id="inputReligion"
               placeholder="Your Religion"
+              name="Religion"
+              value={student.Religion}
+              onChange={handleInputs}
             />
           </div>
         </div>
@@ -267,6 +318,9 @@ export default function General() {
               className="form-control  form-control-sm"
               id="inputMotherTongue"
               placeholder="Your Mother Tongue"
+              name="  Mother_tongue"
+              value={student.Mother_tongue}
+              onChange={handleInputs}
             />
           </div>
         </div>
@@ -291,6 +345,9 @@ export default function General() {
               className="form-control  form-control-sm"
               id="inputFatherName"
               placeholder="Your Father's Name"
+              name="Father_name"
+              value={student.Father_name}
+              onChange={handleInputs}
             />
           </div>
         </div>
@@ -308,6 +365,9 @@ export default function General() {
               className="form-control  form-control-sm"
               id="inputFatherEmail"
               placeholder="Father's Email"
+              name="Father_email"
+              value={student.Father_email}
+              onChange={handleInputs}
             />
           </div>
         </div>
@@ -325,6 +385,9 @@ export default function General() {
               className="form-control  form-control-sm"
               id="inputFatherOccu"
               placeholder="Your Father's Occupation"
+              name="Father_occupation"
+              value={student.Father_occupation}
+              onChange={handleInputs}
             />
           </div>
         </div>
@@ -342,6 +405,9 @@ export default function General() {
               className="form-control  form-control-sm"
               id="inputFatherMobno"
               placeholder="Father's Mobile Number"
+              name="Father_Mobile_no"
+              value={student.Father_Mobile_no}
+              onChange={handleInputs}
             />
           </div>
         </div>
@@ -359,6 +425,9 @@ export default function General() {
               className="form-control  form-control-sm"
               id="inputMotherName"
               placeholder="Your Mother's Name"
+              name="Mother_name"
+              value={student.Mother_name}
+              onChange={handleInputs}
             />
           </div>
         </div>
@@ -376,6 +445,9 @@ export default function General() {
               className="form-control  form-control-sm"
               id="inputMotherEmail"
               placeholder="Mother's Email"
+              name="Mother_email"
+              value={student.Mother_email}
+              onChange={handleInputs}
             />
           </div>
         </div>
@@ -393,6 +465,9 @@ export default function General() {
               className="form-control  form-control-sm"
               id="inputMotherOccu"
               placeholder="Your Mother's Occupation"
+              name="Mother_occupation"
+              value={student.Mother_occupation}
+              onChange={handleInputs}
             />
           </div>
         </div>
@@ -410,11 +485,14 @@ export default function General() {
               className="form-control  form-control-sm"
               id="inputMotherMobno"
               placeholder="Mother's Mobile Number"
+              name="Mother_mobile_no"
+              value={student.Mother_mobile_no}
+              onChange={handleInputs}
             />
           </div>
         </div>
 
-        <div className="row mb-1">
+        {/* <div className="row mb-1">
           <label
             htmlFor="inputGuardianAltMobNo"
             className="col-sm-3 col-form-label d-flex justify-content-end"
@@ -429,7 +507,7 @@ export default function General() {
               placeholder="Alternate Mobile Number"
             />
           </div>
-        </div>
+        </div> */}
       </form>
       <button
         type="button"
