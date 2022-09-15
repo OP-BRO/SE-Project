@@ -91,7 +91,7 @@ const SimpleDrawer = () => {
               </li>
               <li className="list-group-item">
                 <Link to="/admisson">
-                  Admission
+                  Admission Detail
                 </Link>
               </li>
               <li className="list-group-item">
@@ -124,6 +124,11 @@ const SimpleDrawer = () => {
           <div className="mt-3">
             <Link className="link-dark text-decoration-none" to="/feedback">
               <h5>Feedback</h5>
+            </Link>
+          </div>
+          <div className="mt-3">
+            <Link className="link-dark text-decoration-none" to="/admissions">
+              <h5>Admissions</h5>
             </Link>
           </div>
           <div className="mt-3">
