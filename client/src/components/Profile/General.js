@@ -48,7 +48,7 @@ export default function General() {
   };
 
   return (
-    <div>
+    <div className="container shadow bg-body rounded pt-3 pb-3" style={{"width":"90%"}}>
       <h5 className="d-flex justify-content-start ps-2 mt-1 my-2">
         -- Personal Information --
       </h5>
@@ -334,7 +334,7 @@ export default function General() {
             htmlFor="inputFatherMobNo"
             className="col-sm-3 col-form-label d-flex justify-content-end"
           >
-            Father's Mobile Number
+            Father's Mobile No.
           </label>
           <div className="col-sm-7">
             <input
@@ -402,7 +402,7 @@ export default function General() {
             htmlFor="inputMotherMobNo"
             className="col-sm-3 col-form-label d-flex justify-content-end"
           >
-            Mother's Mobile Number
+            Mother's Mobile No.
           </label>
           <div className="col-sm-7">
             <input

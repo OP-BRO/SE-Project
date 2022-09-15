@@ -1,7 +1,7 @@
 import React from 'react'
 export default function Admission() {
   return (
-    <div>
+    <div className="container shadow bg-body rounded pt-3 pb-3" style={{"width":"80%"}}>
         <h5 className="d-flex justify-content-start ps-2 mt-1 my-2">-- Admission Details --</h5>
         <hr className="mt-0 mb-4"/>
         <form className="row g-4 ps-5 pe-5 pt-3 d-flex flex-column">
