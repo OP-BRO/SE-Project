@@ -1,10 +1,10 @@
 import React from 'react'
 
-export default function Bap() {
+export default function Senate() {
   return (
     <>
      <div className="container shadow bg-body rounded text-start pb-3 ps-0 pe-0" style={{"width":"90%"}}>
-            <h1 className="mb-3 d-flex justify-content-center p-2 text-warning" style={{"backgroundColor":"#10477e"}}>--- BAP Meetings ---</h1>
+            <h1 className="mb-3 d-flex justify-content-center p-2 text-warning" style={{"backgroundColor":"#10477e"}}>--- Senate Meetings ---</h1>
         <br /> 
     <form className="row g-4 ps-5 pe-5 pt-3 d-flex flex-column fs-6">
         <div className="row mb-1">

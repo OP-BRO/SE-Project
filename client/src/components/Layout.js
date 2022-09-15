@@ -5,6 +5,8 @@ import Convocation from "./Convocation";
 import Alumni from "./Alumni";
 import Classroom from "./Classroom";
 import Event from "./Event";
+import Bap from "./Bap";
+import Senate from "./Senate";
 import {
   AppBar,
   Toolbar,
@@ -192,6 +194,18 @@ const SimpleDrawer = () => {
           </div>
           <hr />
           <div className="mt-3">
+            <Link className="link-dark text-decoration-none" to="/bap">
+              <div className="fs-5 text-start ps-3">BAP</div>
+            </Link>
+          </div>
+          <hr />
+          <div className="mt-3">
+            <Link className="link-dark text-decoration-none" to="/senate">
+              <div className="fs-5 text-start ps-3">Senate</div>
+            </Link>
+          </div>
+          <hr />
+          <div className="mt-3">
             <Link className="link-dark text-decoration-none" to="/alumni">
               <div className="fs-5 text-start ps-3">Alumni</div>
             </Link>
@@ -252,6 +266,8 @@ const SimpleDrawer = () => {
             <Route exact path="/event" element={<Event />}/>
             <Route exact path="/classroom" element={<Classroom />}/>
             <Route exact path="/scholarship" element={<Scholarship />}/>
+            <Route exact path="/bap" element={<Bap />}/>
+            <Route exact path="/senate" element={<Senate />}/>
           </Routes>
         </div>
         <br />
