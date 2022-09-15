@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Convocation() {
   return (
-    <div className="container shadow bg-body rounded pt-3 pb-3 ps-3 text-start" style={{"width":"90%"}}>
-      <h1 className="mb-3 d-flex justify-content-center">--- Convocation ---</h1> <hr /> 
-      <br /> 
+    <div className="container shadow bg-body rounded text-start pb-3 ps-0 pe-0" style={{"width":"90%"}}>
+      <h1 className="mb-3 d-flex justify-content-center p-2 text-warning" style={{"backgroundColor":"#10477e"}}>--- Convocation  ---</h1>
+      <div className="ps-3">
       <div className="fs-6">
         <h4 className="d-flex justify-content-start">Instructions</h4>
         <ol type='1'>
@@ -99,7 +99,7 @@ export default function Convocation() {
               <button type="button" className="btn btn-secondary btn-sm h-30">Delete</button>
           </div>
         </div>
-        <div className="fs-5 ps-3">
+        <div className="fs-5 ps-1 pe-3">
           <div className="d-flex justify-content-start mb-1">Declaration</div>
           <div className="p-2" style={{"fontSize":"12px", "backgroundColor":"#FCF8E8"}}>
           I HEREBY SOLEMNLY DECLARE AND PROMISE THAT IF ADMITTED TO THE DEGREE FOR WHICH I HAVE BEEN RECOMMENDED, I SHALL IN MY DAILY LIFE AND CONVERSATION, CONDUCT MYSELF, AS BEFITS A MEMBER OF THIS UNIVERSITY THAT I SHALL TO THE UTMOST OF MY CAPACITY AND OPPORTUNITY, SUPPORT THE CAUSE OF MORALITY AND SOUND LEARNING, AND THAT, AS FAR AS IN ME LIES, I SHALL UPHELD AND ADVANCE THE SOCIAL ORDER AND THE WELL BEING OF MY FELLOWMEN IN THE CASE OF PROFESSIONAL DEGREE, THE FOLLOWING SHALL BE ADDED TO THE ABOVE DECLARATION. I SHALL FAITHFULLY AND CAREFULLY FULFIL THE DUTIES OF THE PROFESSION TO WHICH I MAY BE ADMITTED BY VIRTUE OF MY DEGREE, THAT I SHALL ON ALL OCCASIONS MAINTAIN ITS PURITY AND REPUTATION AND I SHALL NEVER DEVIATE FROM THE STRAIGHT PATH OF THEIR HONOURABLE EXCERCISE BY MAKING MY KNOWLEDGE SUBSERVIENT TO UNWORTHY ENDS.
@@ -114,6 +114,7 @@ export default function Convocation() {
           </div>
           </div>
         </div>
+      </div>
       </div>
     </div>
   )

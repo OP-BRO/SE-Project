@@ -4,13 +4,13 @@ export default function Scholarship() {
   return (
     <>
         <div>
-        <div className="container ps-5 pt-2 shadow bg-body rounded text-start pb-3" style={{"width":"90%"}}>
-            <h1 className="mb-3 d-flex justify-content-center">--- Scholarship Portal ---</h1> <hr /> 
+        <div className="container shadow bg-body rounded text-start pb-3 ps-0 pe-0" style={{"width":"90%"}}>
+            <h1 className="mb-3 d-flex justify-content-center p-2 text-warning" style={{"backgroundColor":"#10477e"}}>--- Scholarship  ---</h1>
             <div>
                 <img  className="m-auto mb-5" src="/images/ScholarshipImage.jpeg" style={{"width":"700px","height":"400px"}} alt="" />
             </div>
             <div className="fs-6 mb-5">
-                <h4 className="d-flex justify-content-start">Please enter your details to know about the Scholarships that you are eligible</h4>
+                <h4 className="d-flex justify-content-start ps-5 pe-3">Please enter your details to know about the Scholarships that you are eligible</h4>
             </div>
             <form className="row g-4 ps-5 pe-5 pt-3 d-flex flex-column fs-6">
                 <div className="row mb-1">
@@ -91,7 +91,7 @@ export default function Scholarship() {
 
             </form>
             <div className="d-flex justify-content-center my-3">
-                <button type="button" class="btn btn-secondary">Show Eligible Scholarships</button>
+                <button type="button" class="btn btn-primary">Show Eligible Scholarships</button>
             </div>
 
         </div>

@@ -2,8 +2,8 @@ import React from 'react'
 
 export default function Event() {
   return (
-    <div className="container ps-5 pt-2 shadow bg-body rounded text-start pb-3 mt-5" >
-        <h1 className="mb-3 d-flex justify-content-center">--- Classroom Management---</h1> <hr /> 
+    <div className="container shadow bg-body rounded text-start pb-3 ps-0 pe-0" >
+        <h1 className="mb-3 d-flex justify-content-center p-2 text-warning" style={{"backgroundColor":"#10477e"}}>--- Classroom Management---</h1>
             <br /> 
         <form className="row g-4 ps-5 pe-5 pt-3 d-flex flex-column fs-6">
             <div className="row mb-2">
@@ -69,7 +69,7 @@ export default function Event() {
             </div>
         </form>
         <div className="d-flex justify-content-center my-3">
-            <button type="button" class="btn btn-secondary">Submit</button>
+            <button type="button" class="btn btn-primary">Submit</button>
         </div>
     </div>
   )

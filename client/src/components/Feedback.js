@@ -3,8 +3,9 @@ import React from 'react'
 export default function () {
   return (
     <div>
-      <div className="container ps-5 pt-2 shadow bg-body rounded" style={{"width":"80%"}}>
-      <h1 className="mb-3 d-flex justify-content-center">--- Faculty Feedback form ---</h1> <br />  
+      <div className="container shadow bg-body rounded ps-0 pe-0" style={{"width":"90%"}}>
+      <h1 className="mb-3 d-flex justify-content-center p-2 text-warning" style={{"backgroundColor":"#10477e"}}>--- Faculty Feedback form ---</h1> <br />  
+        <div className="ps-4">
         <div className="mt-3 fs-6 d-flex flex-column">
           {/* <div className="bg-primary">Which option do you want to choose?</div> */}
           <div><label htmlhtmlFor="inputPWD" className="form-label d-flex fs-5"><b>The lecture sequence was well Planned.</b></label></div>
@@ -27,6 +28,7 @@ export default function () {
             </div>
           </div>
         </div>
+        <hr />
         <div className="mt-3 fs-6 d-flex flex-column">
           {/* <div className="bg-primary">Which option do you want to choose?</div> */}
           <div><label htmlhtmlFor="inputPWD" className="form-label d-flex fs-5"><b>The Professor possesses the deep knowledge of subject taught.</b></label></div>
@@ -49,6 +51,7 @@ export default function () {
             </div>
           </div>
         </div>
+        <hr />
         <div className="mt-3 fs-6 d-flex flex-column">
           {/* <div className="bg-primary">Which option do you want to choose?</div> */}
           <div><label htmlhtmlFor="inputPWD" className="form-label d-flex fs-5 fw-bold">The content was illustrated with adequate examples.</label></div>
@@ -71,6 +74,7 @@ export default function () {
             </div>
           </div>
         </div>
+        <hr />
         <div className="mt-3 fs-6 d-flex flex-column">
           {/* <div className="bg-primary">Which option do you want to choose?</div> */}
           <div><label htmlhtmlFor="inputPWD" className="form-label d-flex fs-5 fw-bold">The course exposed you to new knowledges and practices.</label></div>
@@ -93,6 +97,7 @@ export default function () {
             </div>
           </div>
         </div>
+        <hr />
         <div className="mt-3 fs-6 d-flex flex-column">
           {/* <div className="bg-primary">Which option do you want to choose?</div> */}
           <div><label htmlhtmlFor="inputPWD" className="form-label d-flex fs-5 fw-bold">The lectures were clear and easy to understand.</label></div>
@@ -115,6 +120,7 @@ export default function () {
             </div>
           </div>
         </div>
+        <hr />
         <div className="mt-3 fs-6 d-flex flex-column">
           {/* <div className="bg-primary">Which option do you want to choose?</div> */}
           <div><label htmlhtmlFor="inputPWD" className="form-label d-flex fs-5 fw-bold">The teaching aids were effectively used.</label></div>
@@ -137,6 +143,7 @@ export default function () {
             </div>
           </div>
         </div>
+        <hr />
         <div className="mt-3 fs-6 d-flex flex-column">
           {/* <div className="bg-primary">Which option do you want to choose?</div> */}
           <div><label htmlhtmlFor="inputPWD" className="form-label d-flex fs-5 fw-bold">The instructor encourages interactions and were helpful.</label></div>
@@ -159,6 +166,7 @@ export default function () {
             </div>
           </div>
         </div>
+        <hr />
         <div className="mt-3 fs-6 d-flex flex-column">
           {/* <div className="bg-primary">Which option do you want to choose?</div> */}
           <div><label htmlhtmlFor="inputPWD" className="form-label d-flex fs-5 fw-bold">How do you rate this course ?</label></div>
@@ -185,7 +193,7 @@ export default function () {
             </div>
           </div>
         </div>
-        <br />
+        <hr />
         <div className="row mb-2">
           <label htmlhtmlFor="inputPWD" className="form-label d-flex fs-5 fw-bold">How much time do you spend for this course?</label>
           <div className="col-sm-3 mt-0">
@@ -199,13 +207,13 @@ export default function () {
             </select>
           </div>
         </div>
-        <br />
         <div>
           <label htmlFor="exampleFormControlTextarea1" className="form-label d-flex fs-5 fw-bold">Additional Questions or Comments</label>
           <textarea className="form-control w-75" id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
         <br />
-        <button type="button" className="btn btn-secondary mb-3 ">Submit</button>
+        <button type="button" className="btn btn-primary mb-3 ">Submit</button>
+        </div>
       </div>
     </div>
   )

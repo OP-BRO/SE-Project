@@ -82,10 +82,45 @@ const SimpleDrawer = () => {
       <Drawer open={open} onClose={() => setOpen(false)} variant="persistent">
         <List disablePadding className={classes.drawer}>
           <div className="mt-2">
-              <Link className="link-dark text-decoration-none" to="/">
-                <h5>Profile</h5>
-              </Link>
-            <ul className="list-group">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button fs-5 text-start ps-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Profile
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <ul className="list-group">
+                      <li className="list-group-item" aria-current="true">
+                        <Link to="/general">
+                          General
+                        </Link>
+                      </li>
+                      <li className="list-group-item">
+                        <Link to="/admisson">
+                          Admission Detail
+                        </Link>
+                      </li>
+                      <li className="list-group-item">
+                        <Link to="/address">
+                          Address
+                        </Link>
+                      </li>
+                      <li className="list-group-item">
+                        <Link to="/documents">
+                          Documents
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+              {/* <Link className="link-dark text-decoration-none" to="/">
+                <div className="fs-5 text-start ps-3">Profile</div>
+              </Link> */}
+            {/* <ul className="list-group">
               <li className="list-group-item" aria-current="true">
                 <Link to="/general">
                   General
@@ -106,63 +141,74 @@ const SimpleDrawer = () => {
                   Documents
                 </Link>
               </li>
-            </ul>
+            </ul> */}
           </div>
           <div className="mt-3">
             <a className="link-dark text-decoration-none" href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=64638" target="_blank">
-              <h5>Fees</h5>
+              <div className="fs-5 text-start ps-3">Fees</div>
             </a>
           </div>
+          <hr />
           <div className="mt-3">
             <Link className="link-dark text-decoration-none" to="/timetable">
-              <h5>Timetable</h5>
+              <div className="fs-5 text-start ps-3">Timetable</div>
             </Link>
           </div>
+          <hr />
           <div className="mt-3">
             <Link className="link-dark text-decoration-none" to="/grivance">
-              <h5>Grivance</h5>
+              <div className="fs-5 text-start ps-3">Grivance</div>
             </Link>
           </div>
+          <hr />
           <div className="mt-3">
             <Link className="link-dark text-decoration-none" to="/feedback">
-              <h5>Feedback</h5>
+              <div className="fs-5 text-start ps-3">Feedback</div>
             </Link>
           </div>
+          <hr />
           <div className="mt-3">
             <Link className="link-dark text-decoration-none" to="/admissions">
-              <h5>Admissions</h5>
+              <div className="fs-5 text-start ps-3">Admissions</div>
             </Link>
           </div>
+          <hr />
           <div className="mt-3">
             <Link className="link-dark text-decoration-none" to="/scholarship">
-              <h5>Scholarship</h5>
+              <div className="fs-5 text-start ps-3">Scholarship</div>
             </Link>
           </div>
+          <hr />
           <div className="mt-3">
             <Link className="link-dark text-decoration-none" to="/resultmanage">
-              <h5>Result Management</h5>
+              <div className="fs-5 text-start ps-3">Result Management</div>
             </Link>
           </div>
+          <hr />
           <div className="mt-3">
             <Link className="link-dark text-decoration-none" to="/convocation">
-              <h5>Convocation</h5>
+              <div className="fs-5 text-start ps-3">Convocation</div>
             </Link>
           </div>
+          <hr />
           <div className="mt-3">
             <Link className="link-dark text-decoration-none" to="/alumni">
-              <h5>Alumni</h5>
+              <div className="fs-5 text-start ps-3">Alumni</div>
             </Link>
           </div>
+          <hr />
           <div className="mt-3">
             <Link className="link-dark text-decoration-none" to="/event">
-              <h5>Event Management</h5>
+              <div className="fs-5 text-start ps-3">Event Management</div>
             </Link>
           </div>
+          <hr />
           <div className="mt-3">
             <Link className="link-dark text-decoration-none" to="/classroom">
-              <h5>Classroom Management</h5>
+              <div className="fs-5 text-start ps-3">Classroom Management</div>
             </Link>
           </div>
+          <hr />
         </List>
       </Drawer>
       <AppBar
