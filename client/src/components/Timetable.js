@@ -6,7 +6,7 @@ export default function () {
   return (
     <div>
         <div className="container shadow bg-body rounded pt-3 pb-3" style={{"width":"80%"}}>
-            <h2 className="mb-3">--- Time Table ---</h2> 
+            <h2 className="mb-3 d-flex justify-content-center">--- Time Table ---</h2> 
             <div className="border rounded p-3">
                 <div className="p-2 fs-6 text-start">
                     As per the IIT Tirupati Academic Curriculum, the course list is fixed every Semester. The time-table is based on fixed time slots for each of the courses during the week. This decides the faculty lecture schedule.

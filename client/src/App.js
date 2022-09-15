@@ -17,8 +17,7 @@ function App() {
 
     <div className="App">
 
-
-      <Alumni/>
+      <Mainpage/>
 
     </div>
   );

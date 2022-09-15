@@ -4,7 +4,7 @@ export default function () {
   return (
     <div>
       <div className="container ps-5 pt-2 shadow bg-body rounded" style={{"width":"80%"}}>
-      <h1 className="mb-3">--- Faculty Feedback form ---</h1> <br />  
+      <h1 className="mb-3 d-flex justify-content-center">--- Faculty Feedback form ---</h1> <br />  
         <div className="mt-3 fs-6 d-flex flex-column">
           {/* <div className="bg-primary">Which option do you want to choose?</div> */}
           <div><label htmlhtmlFor="inputPWD" className="form-label d-flex fs-5"><b>The lecture sequence was well Planned.</b></label></div>

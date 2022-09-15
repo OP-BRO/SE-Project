@@ -4,7 +4,7 @@ export default function Alumni() {
   return (
     <>
      <div className="container ps-5 pt-2 shadow bg-body rounded text-start pb-3 mt-5" style={{"width":"90%"}}>
-    <h1 className="mb-3">--- Alumni Management  ---</h1> <hr /> 
+    <h1 className="mb-3 d-flex justify-content-center">--- Alumni Management  ---</h1> <hr /> 
         <br /> 
     <form className="row g-4 ps-5 pe-5 pt-3 d-flex flex-column fs-6">
         <div className="row mb-1">
@@ -102,7 +102,6 @@ export default function Alumni() {
         <button type="button" class="btn btn-secondary">Send Invitation</button>
     </div>
     </form>
-    
 </div>
 </>
 

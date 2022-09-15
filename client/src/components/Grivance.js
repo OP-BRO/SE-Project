@@ -4,7 +4,7 @@ export default function Grivance() {
   return (
     <div>
         <div className="container ps-5 pt-2 shadow bg-body rounded text-start pb-3" style={{"width":"80%"}}>
-            <h1 className="mb-3">--- Students' Grivance Cell ---</h1> <hr /> 
+            <h1 className="mb-3 d-flex justify-content-center">--- Students' Grivance Cell ---</h1> <hr /> 
             <br /> 
             <div className="fs-6">
                 <h4 className="d-flex justify-content-start">Introduction</h4>

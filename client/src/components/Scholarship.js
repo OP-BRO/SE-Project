@@ -4,10 +4,10 @@ export default function Scholarship() {
   return (
     <>
         <div>
-        <div className="container ps-5 pt-2 shadow bg-body rounded text-start pb-3" style={{"width":"70%"}}>
-            <h1 className="mb-3 ">--- Scholarship Portal ---</h1> <hr /> 
+        <div className="container ps-5 pt-2 shadow bg-body rounded text-start pb-3" style={{"width":"90%"}}>
+            <h1 className="mb-3 d-flex justify-content-center">--- Scholarship Portal ---</h1> <hr /> 
             <div>
-                <img  className="m-auto mb-5" src="/images/ScholarshipImage.jpeg" style={{"width":"800px","height":"400px"}} alt="" />
+                <img  className="m-auto mb-5" src="/images/ScholarshipImage.jpeg" style={{"width":"700px","height":"400px"}} alt="" />
             </div>
             <div className="fs-6 mb-5">
                 <h4 className="d-flex justify-content-start">Please enter your details to know about the Scholarships that you are eligible</h4>
