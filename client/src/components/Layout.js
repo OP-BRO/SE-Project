@@ -1,22 +1,19 @@
 import React, { useState } from "react";
 import Feedback from "./Feedback";
 import Homepage from "./Homepage";
+import Convocation from "./Convocation";
 import {
-  Button,
   AppBar,
   Toolbar,
   Typography,
   IconButton,
   Drawer,
   List,
-  ListItem,
-  ListItemText,
   CssBaseline,
 } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core/styles";
 import MenuIcon from "@material-ui/icons/Menu";
 import classNames from "classnames";
-import Profile from "./Profile";
 import Timetable from "./Timetable";
 import Grivance from "./Grivance";
 import Admissons from "./Admissons";
@@ -108,6 +105,11 @@ const SimpleDrawer = () => {
             </ul>
           </div>
           <div className="mt-3">
+            <a className="link-dark text-decoration-none" href="https://www.onlinesbi.sbi/sbicollect/icollecthome.htm?corpID=64638" target="_blank">
+              <h5>Fees</h5>
+            </a>
+          </div>
+          <div className="mt-3">
             <Link className="link-dark text-decoration-none" to="/timetable">
               <h5>Timetable</h5>
             </Link>
@@ -125,6 +127,11 @@ const SimpleDrawer = () => {
           <div className="mt-3">
             <Link className="link-dark text-decoration-none" to="/resultmanage">
               <h5>Result Management</h5>
+            </Link>
+          </div>
+          <div className="mt-3">
+            <Link className="link-dark text-decoration-none" to="/convocation">
+              <h5>Convocation</h5>
             </Link>
           </div>
         </List>
@@ -165,6 +172,7 @@ const SimpleDrawer = () => {
             <Route exact path="/feedback" element={<Feedback />}/>
             <Route exact path="/admissions" element={<Admissons />}/>
             <Route exact path="/resultmanage" element={<ResultManagement />}/>
+            <Route exact path="/convocation" element={<Convocation />}/>
           </Routes>
         </div>
         <br />

@@ -3,7 +3,7 @@ import React from 'react'
 export default function () {
   return (
     <div>
-      <div className="container ps-5 pt-2 shadow bg-body rounded" style={{"width":"70%"}}>
+      <div className="container ps-5 pt-2 shadow bg-body rounded" style={{"width":"80%"}}>
       <h1 className="mb-3">--- Faculty Feedback form ---</h1> <br />  
         <div className="mt-3 fs-6 d-flex flex-column">
           {/* <div className="bg-primary">Which option do you want to choose?</div> */}

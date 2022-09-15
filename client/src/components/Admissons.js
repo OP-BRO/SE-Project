@@ -5,7 +5,7 @@ export default function Admissons() {
   return (
     <div>
 
-        <div className="container shadow bg-body rounded pt-3 pb-3" style={{"width":"70%"}}>
+        <div className="container shadow bg-body rounded pt-3 pb-3" style={{"width":"80%"}}>
             <h1 className="mb-3">--- Admissions ---</h1> 
             <div className="p-2 fs-6 text-start">
             Applications are invited for Academic Year 2022-23 admissions commencing from Aug-2022 in the following programmes:

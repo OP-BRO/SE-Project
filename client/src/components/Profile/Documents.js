@@ -5,7 +5,7 @@ export default function
 () {
   return (
    
-    <div className="container p-0">
+    <div className="container shadow bg-body rounded pt-3 pb-3" style={{"width":"80%"}} >
         <h5 className="d-flex justify-content-start ps-2 mt-1 my-2">-- Student Documents --</h5>
         <hr className="mt-0 mb-4"/>
         <div className="d-flex">
