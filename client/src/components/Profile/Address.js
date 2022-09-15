@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Address() {
   return (
-    <div>
+    <div className="container shadow bg-body rounded pt-3 pb-3" style={{"width":"80%"}}>
 
     {/* ////////////////////////////////////////  PERMANENT ADDRESS  ////////////////////////////////////////// */}
       <h5 className="d-flex justify-content-start ps-2 mt-1 my-2">Permanent Address</h5>

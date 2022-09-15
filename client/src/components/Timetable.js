@@ -5,7 +5,7 @@ export default function () {
 
   return (
     <div>
-        <div className="container shadow bg-body rounded pt-3 pb-3" style={{"width":"70%"}}>
+        <div className="container shadow bg-body rounded pt-3 pb-3" style={{"width":"80%"}}>
             <h2 className="mb-3">--- Time Table ---</h2> 
             <div className="border rounded p-3">
                 <div className="p-2 fs-6 text-start">

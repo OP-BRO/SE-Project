@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function ResultManagement() {
   return (
-    <div className="container shadow bg-body rounded pt-3 pb-3" style={{"width":"70%","height":"80vh"}}>
+    <div className="container shadow bg-body rounded pt-3 pb-3" style={{"width":"80%","height":"80vh"}}>
         <h2 className="mb-5">--- Student Results ---</h2> 
         <div className="container d-flex justify-content-lg-around">
             <div className="card" style={{"width":"45%"}}>

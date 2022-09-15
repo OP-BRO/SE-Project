@@ -2,6 +2,7 @@ import React from 'react'
 
 export default function Homepage() {
   return (
+    <>
     <div>
         <div className="card container" style={{"width":"28rem","height":"80vh"}}>
             <div className="fs-4">Hello <b>Harsh Asati</b> </div>
@@ -34,6 +35,7 @@ export default function Homepage() {
             </div>
         </div>
     </div>
+    </>
   )
 }
 
