@@ -8,7 +8,7 @@ import Classroom from './components/Classroom'
 function App() {
   return (
     <div className="App">
-      <Classroom/>
+      <Mainpage/>
     </div>
   );
 }
