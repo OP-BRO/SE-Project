@@ -8,13 +8,16 @@ import Scholarship from './components/Scholarship';
 
 import Event from './components/Event'
 import Alumni from './components/Alumni'
+import Classroom from './components/Classroom'
 
 
 function App() {
   return (
     <div className="App">
 
+
       <Alumni/>
+
 
     </div>
   );
