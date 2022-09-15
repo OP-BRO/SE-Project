@@ -3,6 +3,7 @@ import Feedback from "./Feedback";
 import Homepage from "./Homepage";
 import Convocation from "./Convocation";
 import Alumni from "./Alumni";
+import Classroom from "./Classroom";
 import Event from "./Event";
 import {
   AppBar,
@@ -27,6 +28,7 @@ import General from "./Profile/General";
 import Admission from "./Profile/Admission";
 import Address from "./Profile/Address";
 import Documents from "./Profile/Documents";
+import Scholarship from "./Scholarship";
 
 const drawerWidth = 250;
 
@@ -132,6 +134,11 @@ const SimpleDrawer = () => {
             </Link>
           </div>
           <div className="mt-3">
+            <Link className="link-dark text-decoration-none" to="/scholarship">
+              <h5>Scholarship</h5>
+            </Link>
+          </div>
+          <div className="mt-3">
             <Link className="link-dark text-decoration-none" to="/resultmanage">
               <h5>Result Management</h5>
             </Link>
@@ -149,6 +156,11 @@ const SimpleDrawer = () => {
           <div className="mt-3">
             <Link className="link-dark text-decoration-none" to="/event">
               <h5>Event Management</h5>
+            </Link>
+          </div>
+          <div className="mt-3">
+            <Link className="link-dark text-decoration-none" to="/classroom">
+              <h5>Classroom Management</h5>
             </Link>
           </div>
         </List>
@@ -192,6 +204,8 @@ const SimpleDrawer = () => {
             <Route exact path="/convocation" element={<Convocation />}/>
             <Route exact path="/alumni" element={<Alumni />}/>
             <Route exact path="/event" element={<Event />}/>
+            <Route exact path="/classroom" element={<Classroom />}/>
+            <Route exact path="/scholarship" element={<Scholarship />}/>
           </Routes>
         </div>
         <br />

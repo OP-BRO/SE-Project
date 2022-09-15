@@ -14,14 +14,7 @@ import Classroom from './components/Classroom'
 function App() {
   return (
     <div className="App">
-
-     
-
-
-
-      <Alumni/>
-
-
+      <Mainpage/>
     </div>
   );
 }
