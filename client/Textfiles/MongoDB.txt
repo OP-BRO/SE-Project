@@ -1,0 +1,37 @@
+    Command and its description
+-----------------------------------
+
+
+1. show databases : To view all databases
+2. use db_name : To create or switch databases
+3. db.dropDatabase() : To delete database
+4. db : View current database
+5. db.createCollection('collc_name') : To create new createCollection 
+6. db.collec_name.drop() : To delete any collection 
+7  db.collc_name.insert({   : To insert one row
+    'name' : 'Harry',
+    'lang' : 'C++',
+    })
+8. db.collc_name.insertMany([{   : To insert multiple rows
+    'name' : 'Harry',
+    'lang' : 'C++',
+    },
+    {   
+    'name' : 'Harry',
+    'lang' : 'C++',
+    },
+    {   
+    'name' : 'Harry',
+    'lang' : 'C++',
+    }])
+9. db.collec_name.find()  : To show all rows of a collection
+10. db.collec_name.find().pretty()  : To show all rows of a collection in pretified form
+11. db.collec_name.find().limit(value)  : To show the limite number rows of a collection
+12. db.collec_name.find().count() : To count the number of rows 
+13. db.collc_name.find().sort({--:1}) : To sort rows
+14. db.collec_name.findOne()  : To find the one row of matching
+15. db.comments.updateOne({name: 'Shubham'},
+    {$set: {'name': 'Harry',
+        'lang': 'JavaScript',
+        'member_since': 51
+    }}, {upsert: true})
