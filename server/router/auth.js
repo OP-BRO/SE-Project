@@ -7,6 +7,7 @@ router.use(express.json());
 
 // import dum from "../models/dumSchema.js";
 import gen from "../models/stpgenSchema.js";
+import adm from "../models/stpadmSchema.js";
 import "../db/conn.js";
 
 router.post("/general", async (req, res) => {
@@ -14,6 +15,7 @@ router.post("/general", async (req, res) => {
 
   if (!Student_name || !DOB || !Email || !Mobile_no) {
     return res.status(422).json({ error: "Plz fill the form properly " });
+    window.alert("Plz fill all the mandatory field");
   }
   console.log(req.body);
   //res.json({message: req.body})
@@ -48,7 +50,7 @@ router.post("/admission", async (req, res) => {
     // if (userExist) {
     //   return res.status(409).json({ error: "Email already Exist" });
     // }
-    const newData = new gen({ Board, Department, Degree, JEE_adv_Roll_no,JEE_adv_rank, JEE_adv_year,Admit_cat, JEE_mains_Roll_no });
+    const newData = new adm({ Board, Department, Degree, JEE_adv_Roll_no,JEE_adv_rank, JEE_adv_year,Admit_cat, JEE_mains_Roll_no });
 
     await newData.save();
 

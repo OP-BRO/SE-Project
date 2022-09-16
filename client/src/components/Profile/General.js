@@ -318,7 +318,7 @@ export default function General() {
               className="form-control  form-control-sm"
               id="inputMotherTongue"
               placeholder="Your Mother Tongue"
-              name="  Mother_tongue"
+              name="Mother_tongue"
               value={student.Mother_tongue}
               onChange={handleInputs}
             />
