@@ -3,9 +3,9 @@ import React from 'react'
 export default function Grivance() {
   return (
     <div>
-        <div className="container ps-5 pt-2 shadow bg-body rounded text-start pb-3" style={{"width":"80%"}}>
-            <h1 className="mb-3">--- Students' Grivance Cell ---</h1> <hr /> 
-            <br /> 
+        <div className="container shadow bg-body rounded text-start pb-3 ps-0 pe-0" style={{"width":"90%"}}>
+            <h1 className="mb-3 d-flex justify-content-center p-2 text-warning" style={{"backgroundColor":"#10477e"}}>--- Students' Grievance Cell ---</h1>
+            <div className="ps-3">
             <div className="fs-6">
                 <h4 className="d-flex justify-content-start">Introduction</h4>
                 <p>The Student’s Grievance Cell desires to promote and maintain a conducive and unprejudiced educational environment. The objectives of Students Grievance Cell include the following: <br/>
@@ -101,7 +101,8 @@ export default function Grivance() {
                 </div>
             </form>
             <div className="d-flex justify-content-center my-3">
-                <button type="button" class="btn btn-secondary">Submit</button>
+                <button type="button" class="btn btn-primary">Submit</button>
+            </div>
             </div>
 
         </div>

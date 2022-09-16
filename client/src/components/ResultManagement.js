@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function ResultManagement() {
   return (
-    <div className="container shadow bg-body rounded pt-3 pb-3" style={{"width":"80%","height":"80vh"}}>
-        <h2 className="mb-5">--- Student Results ---</h2> 
-        <div className="container d-flex justify-content-lg-around">
+    <div className="container shadow bg-body rounded text-start pb-3 ps-0 pe-0" style={{"width":"90%"}}>
+            <h1 className="mb-3 d-flex justify-content-center p-2 text-warning" style={{"backgroundColor":"#10477e"}}>--- Result Management  ---</h1> 
+        <div className="container mt-5 mb-5 d-flex justify-content-lg-around">
             <div className="card" style={{"width":"45%"}}>
                 <h5 className="card-header">For Students</h5>
                 <div className="card-body">

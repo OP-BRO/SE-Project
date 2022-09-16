@@ -6,7 +6,7 @@ export default function Attendance() {
         <div>
             <div>
                 <div className="container ps-5 pt-2 shadow bg-body rounded text-start pb-3" style={{"width":"70%"}}>
-                    <h1 className="mb-3 ">--- Mark Attendance ---</h1> <hr /> 
+                    <h1 className="mb-3 d-flex justify-content-center">--- Mark Attendance ---</h1> <hr /> 
                     <div className="container">
                     <div className="row mt-5">
                         <div className="col-md-6 m-auto">

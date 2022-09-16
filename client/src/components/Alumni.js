@@ -3,9 +3,8 @@ import React from 'react'
 export default function Alumni() {
   return (
     <>
-     <div className="container ps-5 pt-2 shadow bg-body rounded text-start pb-3 mt-5" style={{"width":"90%"}}>
-    <h1 className="mb-3">--- Alumni Management  ---</h1> <hr /> 
-        <br /> 
+     <div className="container shadow bg-body rounded text-start pb-3 ps-0 pe-0" style={{"width":"90%"}}>
+    <h1 className="mb-3 d-flex justify-content-center p-2 text-warning" style={{"backgroundColor":"#10477e"}}>--- Alumni Management  ---</h1>
     <form className="row g-4 ps-5 pe-5 pt-3 d-flex flex-column fs-6">
         <div className="row mb-1">
             <label htmlforName="inputStudentName" className="col-sm-3 col-form-label d-flex justify-content-end">Alumni Name:</label>
@@ -51,7 +50,7 @@ export default function Alumni() {
 
 
         <div className="d-flex justify-content-center my-3">
-        <button type="button" class="btn btn-secondary">Add Alumni</button>
+        <button type="button" class="btn btn-primary">Add Alumni</button>
     </div>
 
     </form>
@@ -59,10 +58,9 @@ export default function Alumni() {
 </div>
 
 
-<div className="container ps-5 mb-5 pt-2 shadow bg-body rounded text-start pb-3 mt-5" style={{"width":"90%"}}>
-    <h1 className="mb-3">--- Inviting for the Events  ---</h1> <hr /> 
-        <br /> 
-    <form className="row g-4 ps-5 pe-5 pt-3 d-flex flex-column fs-6">
+<div className="container shadow bg-body rounded text-start pb-3 ps-0 pe-0 mt-5" style={{"width":"90%"}}>
+    <h1 className="mb-3 d-flex justify-content-center p-2 text-warning" style={{"backgroundColor":"#10477e"}}>--- Inviting for Events  ---</h1>
+    <form className="row g-4 ps-5 pe-5 pt-3 d-flex flex-column fs-6 mt-3">
         <div className="row mb-1">
             <label htmlforName="inputStudentName" className="col-sm-3 col-form-label d-flex justify-content-end">Alumni Name:</label>
             <div className="col-sm-6">
@@ -99,10 +97,9 @@ export default function Alumni() {
             </div>
 
         <div className="d-flex justify-content-center my-3">
-        <button type="button" class="btn btn-secondary">Send Invitation</button>
+        <button type="button" class="btn btn-primary">Send Invitation</button>
     </div>
     </form>
-    
 </div>
 </>
 

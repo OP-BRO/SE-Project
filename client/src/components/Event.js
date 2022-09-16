@@ -2,54 +2,55 @@ import React from 'react'
 
 export default function Event() {
   return (
-    <div className="container ps-5 pt-2 shadow bg-body rounded text-start pb-3 mt-5" style={{"width":"90%"}}>
-        <h1 className="mb-3">--- Event Management  ---</h1> <hr /> 
-            <br /> 
+    <div className="container shadow bg-body rounded text-start pb-3 ps-0 pe-0" style={{"width":"90%"}}>
+        <h1 className="mb-3 d-flex justify-content-center p-2 text-warning" style={{"backgroundColor":"#10477e"}}>--- Event Management  ---</h1>
+
+        <div className="ps-3 mt-5">
         <form className="row g-4 ps-5 pe-5 pt-3 d-flex flex-column fs-6">
             <div className="row mb-1">
-                <label htmlforName="inputStudentName" className="col-sm-3 col-form-label d-flex justify-content-end">Event Name:</label>
+                <label htmlforName="inputStudentName" className="col-sm-4 col-form-label d-flex justify-content-end">Event Name:</label>
                 <div className="col-sm-6">
                     <input type="text" className="form-control  form-control-sm" id="eventName" placeholder="Enter Event Name"/>
                 </div>
             </div>
 
             <div className="row mb-1">
-                <label htmlFor="inputMobNo" className="col-sm-3 col-form-label d-flex justify-content-end">Event Coordinator:</label>
+                <label htmlFor="inputMobNo" className="col-sm-4 col-form-label d-flex justify-content-end">Event Coordinator:</label>
                 <div className="col-sm-6">
                     <input type="text" className="form-control  form-control-sm" id="eventCoordinator" placeholder="Enter Event Coordinator"/>
                 </div>
             </div>
 
             <div className="row mb-1">
-                <label htmlFor="inputMobNo" className="col-sm-3 col-form-label d-flex justify-content-end">Coordinator Contact:</label>
+                <label htmlFor="inputMobNo" className="col-sm-4 col-form-label d-flex justify-content-end">Coordinator Contact:</label>
                 <div className="col-sm-6">
                     <input type="number" className="form-control  form-control-sm" id="eventCoordinatorContact" placeholder="Enter contact number"/>
                 </div>
             </div>
 
             <div className="row mb-1">
-                <label htmlFor="inputMobNo" className="col-sm-3 col-form-label d-flex justify-content-end">Event Date:</label>
+                <label htmlFor="inputMobNo" className="col-sm-4 col-form-label d-flex justify-content-end">Event Date:</label>
                 <div className="col-sm-6">
-                    <input type="text" className="form-control  form-control-sm" id="eventDate" placeholder="Enter Event Date"/>
+                    <input type="date" className="form-control  form-control-sm" id="eventDate" placeholder="Enter Event Date"/>
                 </div>
             </div>
 
             <div className="row mb-1">
-                <label htmlFor="inputMobNo" className="col-sm-3 col-form-label d-flex justify-content-end">Event Timings:</label>
+                <label htmlFor="inputMobNo" className="col-sm-4 col-form-label d-flex justify-content-end">Event Timings:</label>
                 <div className="col-sm-6">
                     <input type="text" className="form-control  form-control-sm" id="eventTimings" placeholder="Enter Event Timings"/>
                 </div>
             </div>
 
             <div className="row mb-1">
-                <label htmlFor="inputMobNo" className="col-sm-3 col-form-label d-flex justify-content-end">Event Venue:</label>
+                <label htmlFor="inputMobNo" className="col-sm-4 col-form-label d-flex justify-content-end">Event Venue:</label>
                 <div className="col-sm-6">
                     <input type="text" className="form-control  form-control-sm" id="eventVenue" placeholder="Enter Event Venue"/>
                 </div>
             </div>
 
             <div className="row mb-2">
-                <label htmlforName="inputDepartment" className="col-sm-3 col-form-control d-flex justify-content-end">Club / Organization:</label>
+                <label htmlforName="inputDepartment" className="col-sm-4 col-form-control d-flex justify-content-end">Club / Organization:</label>
                 <div className="col-sm-6">
                 <select className="form-select form-select-sm" aria-label=".form-select-sm example">
                     <option selected>Select Club</option>  
@@ -64,21 +65,21 @@ export default function Event() {
                 </div>
             </div>
             <div className="row mb-2">
-                <label for="exampleFormControlTextarea1 " class="form-label col-sm-3 d-flex justify-content-end">Event Details:</label>
+                <label for="exampleFormControlTextarea1 " class="form-label col-sm-4 d-flex justify-content-end">Event Details:</label>
                 <div className="col-sm-6">
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
                 </div>
             </div>
 
             <div className="row mb-1">
-                <label htmlFor="inputMobNo" className="col-sm-3 col-form-label d-flex justify-content-end">Event Budget:</label>
+                <label htmlFor="inputMobNo" className="col-sm-4 col-form-label d-flex justify-content-end">Event Budget:</label>
                 <div className="col-sm-6">
                     <input type="text" className="form-control  form-control-sm" id="eventBudget" placeholder="Enter Budget Amount"/>
                 </div>
             </div>
 
             <div className="d-flex justify-content-center">
-                <div className="mb-4 fs-5  ps-5 pe-5" style={{"width":"40%"}}>
+                <div className="mb-4 fs-5  ps-5 pe-5" style={{"width":"80%"}}>
                     <label htmlFor="formFile" className="form-label" style={{"float":"left"}}>Budget Detail PDF</label>
                     <input className="form-control form-control-sm" style={{"border":"1px solid black"}} type="file" id="formFileSm"/>
                 </div>
@@ -89,8 +90,10 @@ export default function Event() {
             </div>
         </form>
         <div className="d-flex justify-content-center my-3">
-            <button type="button" class="btn btn-secondary">Submit</button>
+            <button type="button" class="btn btn-primary">Submit</button>
         </div>
+        </div>
+        
     </div>
   )
 }
