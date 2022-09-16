@@ -70,13 +70,13 @@ export default function General() {
 
     const data = await res.json();
     if (data.status === 422 || !data) {
-      window.alert("Tu Chutiya Hai, Form Dhang se bhar");
-      console.log("Tu Chutiya Hai, Form Dhang se bhar");
+      window.alert("Plz fill the form properly");
+      console.log("Plz fill the form properly");
     } else {
-      window.alert("Tune form achhe se bhara");
-      console.log("Tune form achhe se bhara");
+      window.alert("Form submitted successfully");
+      console.log("Form submitted successfully");
 
-      // history.push("/fdgh");
+      history.push("/Admission");
     }
   };
 

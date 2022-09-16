@@ -71,7 +71,11 @@ const stpgenSchema = new mongoose.Schema({
     type: String,
     required: false,
   },
-  Fmobile_no: {
+  Mother_occupation: {
+    type: String,
+    required: false,
+  },
+  Mother_mobile_no: {
     type: Number,
     required: false,
   },

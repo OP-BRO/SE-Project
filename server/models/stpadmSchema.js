@@ -43,4 +43,4 @@ const stpadmSchema = new mongoose.Schema({
 
 const Studentadm = mongoose.model('studentadm' , stpgenSchema);
 
-module.exports = Studentadm;
+export default Studentadm;
