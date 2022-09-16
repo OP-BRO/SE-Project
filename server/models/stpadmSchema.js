@@ -30,10 +30,7 @@ const stpadmSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    cat: {
-        type: String,
-        required: true
-    }, 
+
     JEE_mains_Roll_no: {
         type: String,
         required: true
@@ -41,6 +38,6 @@ const stpadmSchema = new mongoose.Schema({
 
 })
 
-const Studentadm = mongoose.model('studentadm' , stpgenSchema);
+const Studentadm = mongoose.model('studentadm' , stpadmSchema);
 
-module.exports = Studentadm;
+export default Studentadm;

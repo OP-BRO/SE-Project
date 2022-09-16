@@ -76,5 +76,4 @@ const stpgenSchema = new mongoose.Schema({
 })
 
 const Student = mongoose.model('student' , stpgenSchema);
-
-module.exports = Student;
+export default Student;
