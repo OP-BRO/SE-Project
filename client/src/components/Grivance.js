@@ -1,6 +1,56 @@
-import React from 'react'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+
+
 
 export default function Grivance() {
+    const history = useNavigate();
+    const [griv, setStudentadm] = useState({
+        student_name:"",
+        email:"",
+           mob_number:"",
+          department:"",
+          grivance_details:"",
+    });
+  
+    let name, value;
+    const handleInputs = (e) => {
+      console.log(e);
+      name = e.target.name;
+      value = e.target.value;
+  
+      setStudentadm({ ...griv, [name]: value });
+    };
+    const PostData = async (e) => {
+      e.preventDefault();
+      const { student_name,email,mob_number,department,grivance_details } = griv;
+  
+      const res = await fetch("/grivance", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            student_name,
+            email,
+            mob_number,
+            department,
+            grivance_details
+        }),
+      });
+  
+      const data = await res.json();
+      if (data.status === 422 || !data) {
+        window.alert("Plz fill the form properly");
+        console.log("Plz fill the form properly");
+      } else {
+        window.alert("Form submitted successfully ");
+        console.log("Form submitted properlly");
+  
+        history("/General");
+      }
+    };
+
   return (
     <div>
         <div className="container shadow bg-body rounded text-start pb-3 ps-0 pe-0" style={{"width":"90%"}}>
@@ -59,28 +109,38 @@ export default function Grivance() {
                 <div className="row mb-1">
                     <label htmlforName="inputStudentName" className="col-sm-3 col-form-label d-flex justify-content-end">Student Name:</label>
                     <div className="col-sm-6">
-                        <input type="text" className="form-control  form-control-sm" id="inputStudentName" placeholder="Your Name"/>
+                        <input type="text" className="form-control  form-control-sm" id="inputStudentName" placeholder="Your Name"
+                        name= "student_name"
+                        value={griv.student_name}
+                        onChange={handleInputs}
+                        />
                     </div>
                 </div>
 
                 <div className="row mb-1">
                     <label htmlforName="inputPersEmail" className="col-sm-3 col-form-label d-flex justify-content-end">Personal Email:</label>
                     <div className="col-sm-6">
-                        <input type="email" className="form-control  form-control-sm" id="inputPersEmail" placeholder="Email"/>
+                        <input type="email" className="form-control  form-control-sm" id="inputPersEmail" placeholder="Email" name= "email"
+                        value={griv.email}
+                        onChange={handleInputs}
+                        />
                     </div>
                 </div>
 
                 <div className="row mb-1">
                     <label htmlFor="inputMobNo" className="col-sm-3 col-form-label d-flex justify-content-end">Mobile Number:</label>
                     <div className="col-sm-6">
-                        <input type="text" className="form-control  form-control-sm" id="inputMobno" placeholder="Mobile Number"/>
+                        <input type="text" className="form-control  form-control-sm" id="inputMobno" placeholder="Mobile Number" name="mob_number"
+                        value={griv.mob_number}
+                        onChange={handleInputs}
+                        />
                     </div>
                 </div>
 
                 <div className="row mb-2">
                     <label htmlforName="inputDepartment" className="col-sm-3 col-form-control d-flex justify-content-end">Department:</label>
                     <div className="col-sm-6">
-                    <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <select className="form-select form-select-sm" aria-label=".form-select-sm example" name="department" value={griv.department} onChange={handleInputs}>
                         <option selected>Select Department</option>  
                         <option value="1">Computer Science and Engineering</option>
                         <option value="2">Electrical Engineering</option>
@@ -94,14 +154,20 @@ export default function Grivance() {
                     </div>
                 </div>
                 <div className="row mb-2">
-                    <label for="exampleFormControlTextarea1 " class="form-label col-sm-3 d-flex justify-content-end">Grivance Details:</label>
+                    <label for="exampleFormControlTextarea1 " class="form-label col-sm-3 d-flex justify-content-end">Grivance Details:
+                    </label>
                     <div className="col-sm-6">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" value={griv.grivance_details}
+                        onChange={handleInputs} name="grivance_details"></textarea>
                     </div>
                 </div>
             </form>
             <div className="d-flex justify-content-center my-3">
-                <button type="button" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-primary"
+                onClick={PostData}
+                >Submit
+                
+                </button>
             </div>
             </div>
 

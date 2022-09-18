@@ -1,6 +1,100 @@
-import React from 'react'
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Senate() {
+    const history = useNavigate();
+    const [senate_meet, setsenate_meet] = useState({
+        meeting_name:"",
+        meeting_agenda:"",
+        cometee_type:"",
+        meeting_date:""
+    });
+    const [arch_meet, setarch_meet] = useState({
+        meeting_name2:"",
+        meeting_agenda2:"",
+        cometee_type2:"",
+        meeting_date2:""
+    });
+  
+    let name, value;
+    const handleInputs = (e) => {
+      console.log(e);
+      name = e.target.name;
+      value = e.target.value;
+  
+      setsenate_meet({ ...senate_meet, [name]: value });
+    };
+    const PostData = async (e) => {
+      e.preventDefault();
+      const { meeting_name,meeting_agenda,cometee_type, meeting_date} = senate_meet;
+
+  
+      const res = await fetch("/senate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            meeting_name,
+            meeting_agenda,
+            cometee_type, 
+            meeting_date
+        }),
+      });
+
+      
+  
+      const data = await res.json();
+      if (data.status === 422 || !data) {
+        window.alert("Plz fill the form properly");
+        console.log("Plz fill the form properly");
+      } else {
+        window.alert("Form submitted successfully ");
+        console.log("Form submitted properlly");
+  
+        history("/General");
+      }
+    };
+ 
+    const handleInputs2 = (e) => {
+      console.log(e);
+      name = e.target.name;
+      value = e.target.value;
+  
+      setarch_meet({ ...arch_meet, [name]: value });
+    };
+    const PostData2 = async (e) => {
+        e.preventDefault();
+        const { meeting_name2,meeting_agenda2,cometee_type2, meeting_date2} = arch_meet;
+        
+    
+        const res = await fetch("/arch", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+              meeting_name:meeting_name2,
+              meeting_agenda:meeting_agenda2,
+              cometee_type:cometee_type2, 
+              meeting_date:meeting_date2
+          }),
+        });
+  
+        
+    
+        const data = await res.json();
+        if (data.status === 422 || !data) {
+          window.alert("Plz fill the form properly");
+          console.log("Plz fill the form properly");
+        } else {
+          window.alert("Form submitted successfully ");
+          console.log("Form submitted properlly");
+    
+          history("/General");
+        }
+      };
+
   return (
     <>
      <div className="container shadow bg-body rounded text-start pb-3 ps-0 pe-0" style={{"width":"90%"}}>
@@ -10,28 +104,40 @@ export default function Senate() {
         <div className="row mb-1">
             <label htmlforName="inputStudentName" className="col-sm-3 col-form-label d-flex justify-content-end">Meeting Name:</label>
             <div className="col-sm-6">
-                <input type="text" className="form-control  form-control-sm" id="meetingName" placeholder="Enter Meeting Name"/>
+                <input type="text" className="form-control  form-control-sm" id="meetingName" placeholder="Enter Meeting Name" name="meeting_name"
+                value={senate_meet.meeting_name}
+                onChange={handleInputs}
+                />
             </div>
         </div>
 
         <div className="row mb-1">
             <label htmlFor="inputMobNo" className="col-sm-3 col-form-label d-flex justify-content-end">Meeting Date:</label>
             <div className="col-sm-6">
-                <input type="date" className="form-control  form-control-sm" id="meetDate" placeholder="Enter Date"/>
+                <input type="date" className="form-control  form-control-sm" id="meetDate" placeholder="Enter Date" name="meeting_date"
+                value={senate_meet.meeting_date}
+                onChange={handleInputs}
+                />
             </div>
         </div>
 
         <div className="row mb-2">
             <label for="exampleFormControlTextarea1 " class="form-label col-sm-3 d-flex justify-content-end">Meeting Agenda:</label>
-            <div className="col-sm-6">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+            <div className="col-sm-6" 
+            
+            >
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="8" name="meeting_agenda" value={senate_meet.meeting_agenda}
+            onChange={handleInputs}></textarea>
             </div>
         </div>
 
         <div className="row mb-2">
             <label htmlforName="inputDepartment" className="col-sm-3 col-form-control d-flex justify-content-end">Committee :</label>
             <div className="col-sm-6">
-            <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+            <select className="form-select form-select-sm" aria-label=".form-select-sm example" name="cometee_type"
+            value={senate_meet.cometee_type}
+            onChange={handleInputs}
+            >
                 <option selected>Select Committee</option>  
                 <option value="1">Board of Academic Programme </option>
                 <option value="2">Hostel Affairs Committee</option>
@@ -54,7 +160,9 @@ export default function Senate() {
 
 
         <div className="d-flex justify-content-center my-3">
-        <button type="button" class="btn btn-primary">Add Meeting Details</button>
+        <button type="button" class="btn btn-primary"
+        onClick={PostData}
+        >Add Meeting Details</button>
     </div>
 
      
@@ -70,7 +178,10 @@ export default function Senate() {
         <div className="row mb-1">
             <label htmlforName="inputStudentName" className="col-sm-3 col-form-label d-flex justify-content-end">Meeting Name:</label>
             <div className="col-sm-6">
-                <input type="text" className="form-control  form-control-sm" id="meetingName" placeholder="Enter Meeting"/>
+                <input type="text" className="form-control  form-control-sm" id="meetingName" placeholder="Enter Meeting" name="meeting_name2"
+                value={arch_meet.meeting_name2}
+                onChange={handleInputs2}
+                />
             </div>
         </div>
 
@@ -78,15 +189,23 @@ export default function Senate() {
 
         <div className="row mb-2">
             <label for="exampleFormControlTextarea1 " class="form-label col-sm-3 d-flex justify-content-end">Meeting Agenda:</label>
-            <div className="col-sm-6">
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"></textarea>
+            <div className="col-sm-6" 
+            >
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="8"
+                name="meeting_agenda2"
+                value={arch_meet.meeting_agenda2}
+                onChange={handleInputs2}
+                ></textarea>
             </div>
         </div>
 
         <div className="row mb-2">
             <label htmlforName="inputDepartment" className="col-sm-3 col-form-control d-flex justify-content-end">Committee :</label>
-            <div className="col-sm-6">
-            <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+            <div className="col-sm-6" 
+            >
+            <select className="form-select form-select-sm" aria-label=".form-select-sm example" name="cometee_type2"
+            value={arch_meet.cometee_type2}
+            onChange={handleInputs2}>
                 <option selected>Select Committee</option>  
                 <option value="1">Board of Academic Programme </option>
                 <option value="2">Hostel Affairs Committee</option>
@@ -103,7 +222,10 @@ export default function Senate() {
             <div className="row mb-1">
             <label htmlFor="inputMobNo" className="col-sm-3 col-form-label d-flex justify-content-end">Meeting Date:</label>
             <div className="col-sm-6">
-                <input type="date" className="form-control  form-control-sm" id="meetDate" placeholder="Enter Date"/>
+                <input type="date" className="form-control  form-control-sm" id="meetDate" placeholder="Enter Date" name="meeting_date2"
+                value={arch_meet.meeting_date2}
+                onChange={handleInputs2}
+                />
             </div>
         </div>
 
@@ -120,7 +242,9 @@ export default function Senate() {
             </div>
 
         <div className="d-flex justify-content-center my-3">
-        <button type="button" class="btn btn-primary">Add to Archive</button>
+        <button type="button" class="btn btn-primary"
+        onClick={PostData2}
+        >Add to Archive</button>
     </div>
 
      

@@ -32,6 +32,10 @@ const stpgenSchema = new mongoose.Schema({
         type: Number,
         required: false
     },
+    Home_town: {
+        type: String,
+        required: false
+    },
     Nationality: {
         type: String,
         required: false
@@ -69,11 +73,8 @@ const stpgenSchema = new mongoose.Schema({
         type: Number,
         required: false
     },
-    Home_town: {
-        type: String,
-        required: false
-    }
+    
 })
 
-const Student = mongoose.model('student' , stpgenSchema);
-export default Student;
+const studentadd = mongoose.model('studentadd' , stpgenSchema);
+export default studentadd;

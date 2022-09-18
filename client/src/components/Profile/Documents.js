@@ -162,6 +162,13 @@ export default function
                 <button type="button" className="btn btn-secondary btn-sm h-30">Delete</button>
             </div>
         </div>
+        <button
+        type="button"
+        name="submitdoc"
+        id="submitdoc"
+        className="btn btn-secondary my-3">
+        Submit
+        </button>
     </div>
   )
 }

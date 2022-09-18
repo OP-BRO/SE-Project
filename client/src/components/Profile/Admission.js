@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 export default function Admission() {
-    const history = useNavigate();
+    const navigate = useNavigate();
     const [studentadm, setStudentadm] = useState({
         Board:"", 
         Department:"", 
@@ -51,7 +51,7 @@ export default function Admission() {
         window.alert("Form submitted successfully ");
         console.log("Form submitted properlly");
   
-        history.push("/General");
+        navigate("/General");
       }
     };
 

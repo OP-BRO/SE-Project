@@ -1,6 +1,54 @@
-import React from 'react'
+
+
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function Scholarship() {
+    const history = useNavigate();
+    const [scholar, setscholar] = useState({
+        student_name:"",
+           email:"",
+           mob_number:"",
+          department:"",
+          income:"",
+          cast:"",
+            grade:""
+    });
+  
+    let name, value;
+    const handleInputs = (e) => {
+      console.log(e);
+      name = e.target.name;
+      value = e.target.value;
+  
+      setscholar({ ...scholar, [name]: value });
+    };
+    const PostData = async (e) => {
+      e.preventDefault();
+      const {  student_name,email,mob_number,department,income,cast,grade } = scholar;
+  
+      const res = await fetch("/scholarship", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            student_name,email,mob_number,department,income,cast,grade
+        }),
+      });
+  
+      const data = await res.json();
+      if (data.status === 422 || !data) {
+        window.alert("Plz fill the form properly");
+        console.log("Plz fill the form properly");
+      } else {
+        window.alert("Form submitted successfully ");
+        console.log("Form submitted properlly");
+  
+       // history("/General");
+      }
+    };
+
   return (
     <>
         <div>
@@ -16,28 +64,39 @@ export default function Scholarship() {
                 <div className="row mb-1">
                     <label htmlforName="inputStudentName" className="col-sm-3 col-form-label d-flex justify-content-end">Student Name:</label>
                     <div className="col-sm-6">
-                        <input type="text" className="form-control  form-control-sm" id="inputStudentName" placeholder="Your Name"/>
+                        <input type="text" className="form-control  form-control-sm" id="inputStudentName" placeholder="Your Name" name="student_name"
+                        value={scholar.student_name}
+                        onChange={handleInputs}/>
                     </div>
                 </div>
 
                 <div className="row mb-1">
                     <label htmlforName="inputPersEmail" className="col-sm-3 col-form-label d-flex justify-content-end">Personal Email:</label>
                     <div className="col-sm-6">
-                        <input type="email" className="form-control  form-control-sm" id="inputPersEmail" placeholder="Email"/>
+                        <input type="email" className="form-control  form-control-sm" id="inputPersEmail" placeholder="Email" name="email"
+                        value={scholar.email}
+                        onChange={handleInputs}
+                        />
                     </div>
                 </div>
 
                 <div className="row mb-1">
                     <label htmlFor="inputMobNo" className="col-sm-3 col-form-label d-flex justify-content-end">Mobile Number:</label>
                     <div className="col-sm-6">
-                        <input type="text" className="form-control  form-control-sm" id="inputMobno" placeholder="Mobile Number"/>
+                        <input type="text" className="form-control  form-control-sm" id="inputMobno" placeholder="Mobile Number" name="mob_number"
+                        value={scholar.mob_number}
+                        onChange={handleInputs}
+                        />
                     </div>
                 </div>
 
                 <div className="row mb-2">
                     <label htmlforName="inputDepartment" className="col-sm-3 col-form-control d-flex justify-content-end">Department:</label>
                     <div className="col-sm-6">
-                    <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <select className="form-select form-select-sm" aria-label=".form-select-sm example" name = "department"
+                    value={scholar.department}
+                    onChange={handleInputs}
+                    >
                         <option selected>Select Department</option>  
                         <option value="1">Computer Science and Engineering</option>
                         <option value="2">Electrical Engineering</option>
@@ -54,11 +113,15 @@ export default function Scholarship() {
                 <div className="row mb-2">
                     <label htmlforName="Incomecategory" className="col-sm-3 col-form-control d-flex justify-content-end">Income:</label>
                     <div className="col-sm-6">
-                    <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <select className="form-select form-select-sm" aria-label=".form-select-sm example" name="income"
+                    value={scholar.income}
+                    onChange={handleInputs}
+                    >
                         <option selected>Select Your Income Category</option>  
-                        <option value="1">less than 100000</option>
-                        <option value="2">less than 500000</option>
-                        <option value="3">less than 800000</option>
+                        <option value="1">less than 1 lakh pa</option>
+                        <option value="2">less than 5 lakhs pa</option>
+                        <option value="3">less than 8 lakhs pa</option>
+                        <option value="4">more than 8 lakhs pa</option>
                     </select>
                     </div>
                 </div>
@@ -66,7 +129,10 @@ export default function Scholarship() {
                 <div className="row mb-2">
                     <label htmlforName="Castcategory" className="col-sm-3 col-form-control d-flex justify-content-end">Cast:</label>
                     <div className="col-sm-6">
-                    <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <select className="form-select form-select-sm" aria-label=".form-select-sm example" name="cast"
+                    value={scholar.cast}
+                    onChange={handleInputs}
+                    >
                         <option selected>Select Your Cast Category</option>  
                         <option value="1">General</option>
                         <option value="2">OBC_NCL</option>
@@ -80,7 +146,10 @@ export default function Scholarship() {
                 <div className="row mb-2">
                     <label htmlforName="Grades" className="col-sm-3 col-form-control d-flex justify-content-end">Grade:</label>
                     <div className="col-sm-6">
-                    <select className="form-select form-select-sm" aria-label=".form-select-sm example">
+                    <select className="form-select form-select-sm" aria-label=".form-select-sm example" name= "grade"
+                    value={scholar.grade}
+                    onChange={handleInputs}
+                    >
                         <option selected>Select your Grades</option>  
                         <option value="1">less than 6</option>
                         <option value="2">less than 8 greater than 6</option>
@@ -91,7 +160,11 @@ export default function Scholarship() {
 
             </form>
             <div className="d-flex justify-content-center my-3">
-                <button type="button" class="btn btn-primary">Show Eligible Scholarships</button>
+                <button type="button" class="btn btn-primary"
+                onClick={PostData}
+                >Show Eligible Scholarships
+            
+                </button>
             </div>
 
         </div>
