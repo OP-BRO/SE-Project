@@ -161,7 +161,6 @@ router.post("/scholarship", async (req, res) => {
     }
     //const userLogin = await dum.findOne({ email: email });
     //console.log(userLogin);
-    console.log(grade);
     if (grade == 2 || grade == 3) {
       if ( cast === '3' || cast === '4' || cast === '5') {
         res.json({ message: "You are eligible" });
